@@ -1,0 +1,26 @@
+html 
+    head 
+        title=name 
+    body 
+        h3 Edit Produk
+        form(action="/produk/update/"+dataProduk._id, method="POST") 
+            table 
+                tr
+                    td 
+                        label(for="nama_produk") Product Name:
+                    td
+                        input(name="nama_produk" value=dataProduk.nama_produk)
+                tr
+                    td 
+                        label(for="stock") Stock:
+                    td
+                        input(name="stock" type="number" value=dataProduk.stock)
+                tr
+                    td 
+                        label(for="price") Price:
+                    td
+                        input(name="price" type="number" value=dataProduk.price)
+
+                tr
+                    td(span="2")
+                        button(type="submit") Update

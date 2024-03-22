@@ -1,0 +1,21 @@
+html 
+    head 
+        title Sign In
+    body 
+        h3 Sign In
+        if(msg)
+          i = msg
+        form(action="/login", method="POST") 
+            div 
+                label(for="name") Nama: 
+                input(name="name",required) 
+            br
+            div 
+                label(for="email") email: 
+                input(type="email",name="email",required) 
+            br
+            div 
+                label(for="password") password: 
+                input(type="password",name="password",required) 
+            br
+            button(type = "submit") login

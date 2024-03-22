@@ -1,0 +1,23 @@
+html 
+    head 
+        title="Show data produk" 
+    body 
+        h3 Daftar Produk
+        a(href="/produk/create") Tambah Produk
+        br
+        br  
+        table(border="1" cellspacing="0" cellpadding="5")
+            tr
+                th Nama produk
+                th Stock
+                th Harga
+                th Aksi
+            each data in dataProduk
+                tr
+                    td=data.nama_produk
+                    td=data.stock
+                    td=data.price
+                    td
+                        a(href="/produk/edit/"+data._id) Edit
+                        | &nbsp;
+                        a(href="/produk/delete/"+data._id) Delete

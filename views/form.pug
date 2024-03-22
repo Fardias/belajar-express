@@ -1,0 +1,14 @@
+html 
+    head 
+        title Belajar Form 
+    body 
+        form(action="/form", method="POST", enctype="multipart/form-data") 
+            div 
+                label(for="nama") Nama: 
+                input(name="nama") 
+            br
+            div 
+                label(for="file") File: 
+                input(type="file",name="file") 
+            br
+            button(type = "submit") Kirim Data

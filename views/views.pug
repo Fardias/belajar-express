@@ -1,0 +1,16 @@
+doctype html
+html 
+    head 
+        title Hello Pug
+    body 
+        h1 Hello Pugs
+
+        if(user)
+            p Hello #{user.name}
+        else
+            p Hello Guest
+
+        
+        ul
+          each name in listChara
+            li= name

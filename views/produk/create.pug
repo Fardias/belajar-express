@@ -1,0 +1,26 @@
+html 
+    head 
+        title=name 
+    body 
+        h3 Tambah Produk
+        form(action="/produk/save" method="POST") 
+            table 
+                tr
+                    td 
+                        label(for="nama_produk") Product Name:
+                    td
+                        input(name="nama_produk")
+                tr
+                    td 
+                        label(for="stock") Stock:
+                    td
+                        input(name="stock" type="number")
+                tr
+                    td 
+                        label(for="price") Price:
+                    td
+                        input(name="price" type="number")
+
+                tr
+                    td(span="2")
+                        button(type="submit") Kirim

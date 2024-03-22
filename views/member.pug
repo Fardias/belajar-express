@@ -1,0 +1,26 @@
+doctype html
+html 
+    head 
+        title Daftar Member
+    body 
+        include ./header.pug
+
+        table(border="1", width="80%", cellspacing="0", cellpadding="5")
+            tr
+                th nama 
+                th alamat
+                th element
+                th gender
+            each item in member
+                tr
+                    td= item.nama
+                    td= item.alamat
+                    td= item.element
+                    td= item.gender
+
+
+        p member pertama = #{member[0].nama}
+        p beralamat = #{member[0].alamat}
+        br
+        p member terakhir = #{member[member.length - 1].nama}
+        p beralamat = #{member[member.length - 1].alamat}
